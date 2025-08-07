@@ -41,7 +41,8 @@ You can:
     MONGODB_URI=mongodb+srv://<your-mongo-uri>
     ```
 
-    > [!NOTE] > _We recommend using a free MongoDB cluster. Each server document is just a few KB with indexes._
+ > [!NOTE] 
+ > *We recommend using a free MongoDB cluster. Each server document is just a few KB with indexes.*
 
 3. Install dependencies:
 
