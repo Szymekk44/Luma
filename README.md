@@ -1,24 +1,26 @@
 # Luma - Open Source Bot for Zyntra.gg
 
-**Luma** is an open-source moderation and utility bot built for [Zyntra](https://zyntra.gg) by [Szymekk](https://github.com/szymekk).  
+**Luma** is an open-source moderation and utility bot built for [Zyntra](https://zyntra.gg) by [Szymekk](https://github.com/szymekk).
 It supports key features like autoroles, welcome messages, permission viewing, and much more!
 
 You can:
 
 - ✅ **Test it** on our official server: [https://zyntra.gg/invite/zyntra](https://zyntra.gg/invite/zyntra)
-- ✅ **Add it to your own server**:  
+- ✅ **Add it to your own server**:
   [https://zyntra.gg/authorize/bot/7358806823119360002?permissions=32768](https://zyntra.gg/authorize/bot/7358806823119360002?permissions=32768)
 
 ---
 
 ## ⚙️ Features
 
-- ✅ Autorole system  
-- ✅ Welcome message configuration  
-- ✅ Command prefix customization  
-- ✅ Check user permissions  
-- ✅ Simple help menu  
+- ✅ Autorole system – auto-assign roles to new users when they join
+- ✅ Welcome messages – greet new members with a custom message in a chosen channel (fully customizable)
+- ✅ Command prefix customization
+- ✅ Check user permissions
+- ✅ Simple help embed creator
 - 🔌 Built in JavaScript using native REST API calls to Zyntra (no external SDK required)
+- 🧠 Built-in cache for servers and members to reduce API calls
+- 🚦 Internal message rate limiter to avoid hitting Zyntra's API rate limits (fully adjustable)
 
 ---
 
@@ -45,7 +47,7 @@ You can:
    ```bash
    npm install
    ```
-
+   
 4. Start the bot:
 
    ```bash
@@ -56,17 +58,17 @@ You can:
 
 ## 🧵 Commands Overview
 
-- `/autorole` — Configure automatic role assignment  
-- `/welcome` — Set up welcome messages  
-- `/prefix` — Change the bot prefix for your server  
-- `/perms` — Check a user’s permissions  
-- `/help` — View all available commands  
+- `/autorole` — Configure automatic role assignment
+- `/welcome` — Set up welcome messages
+- `/prefix` — Change the bot prefix for your server
+- `/perms` — Check a user’s permissions
+- `/help` — View all available commands
 
 ---
 
 ## 🤝 Contributing
 
-Pull requests are welcome! Feel free to fork the project and improve it.  
+Pull requests are welcome! Feel free to fork the project and improve it.
 Whether it's fixing bugs, improving performance, or adding new features — contributions are appreciated.
 
 ---
