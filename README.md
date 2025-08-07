@@ -18,6 +18,7 @@ You can:
 - ✅ Command prefix customization
 - ✅ Check user permissions
 - ✅ Simple help embed creator
+- ✅ Full permission system – respects and checks users' permissions and role priorities
 - 🔌 Built in JavaScript using native REST API calls to Zyntra (no external SDK required)
 - 🧠 Built-in cache for servers and members to reduce API calls
 - 🚦 Internal message rate limiter to avoid hitting Zyntra's API rate limits (fully adjustable)
