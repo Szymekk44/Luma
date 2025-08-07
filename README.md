@@ -30,7 +30,7 @@ You can:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/Szymekk/Luma.git
+   git clone https://github.com/Szymekk44/Luma.git
    cd Luma
    ```
 
