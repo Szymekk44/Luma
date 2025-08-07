@@ -2,7 +2,7 @@ const helpEmbed = require('@core/helpEmbed');
 const guildCache = require('@core/guildCache');
 const rolesManager = require('@core/rolesManager');
 const { sendMessage } = require('../api/messages.js');
-const { getUserHighestPriority, requirePermission, Permissions } = require('../core/permissions.js');
+const { getUserHighestPriority, requirePermission, isRoleProtected, Permissions } = require('../core/permissions.js');
 
 module.exports = {
     name: 'autorole',
@@ -47,6 +47,12 @@ async function handleConfig(data, args, commandName) {
                     content: `${guildData.autoroleConfig.role || 'unset'}`,
                 });
             } else {
+                if (await isRoleProtected(role, data.guild)) {
+                    await sendMessage(data.channel, {
+                        content: `You do not have sufficient permissions to manage this role. (Role protected)`,
+                    });
+                    return;
+                }
                 const userPriority = await getUserHighestPriority(data.user.id, data.guild);
                 const roleToGive = await rolesManager.getRole(data.guild, role);
 

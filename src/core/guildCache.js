@@ -20,7 +20,7 @@ class GuildCache {
                 await guildDoc.save();
             }
 
-            const response = await fetch(`${config.path}/guilds/${guildId}`, {
+            const response = await fetch(`https://zyntra.gg/api/v1/guilds/${guildId}`, {
                 headers: config.defaultHeaders,
             });
 

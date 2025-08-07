@@ -1,5 +1,6 @@
 const config = require('@/config.js');
 const guildCache = require('@core/guildCache');
+const userManager = require('@core/userManager');
 const logger = require('@core/logger');
 
 const cooldown = 1000; // cooldown in MS
@@ -10,6 +11,7 @@ const userCommandHistory = new Map(); // userId -> array of timestamps
 module.exports = {
     name: 'messageReceived',
     async execute(socket, commands, data) {
+        console.log(data);
         const content = data.content?.trim();
         if (!content) return;
 
@@ -81,7 +83,15 @@ module.exports = {
             }
         }
 
+        // Cleanup user cache when it gets too large
+        if (userManager.userCache.size > 500) {
+            userManager.cleanupCache(300000); // 5 minutes
+        }
+
         try {
+            // Cache user data from WebSocket event (more reliable than API)
+            userManager.cacheUserFromEvent(data.user);
+
             await command.execute(data, args, socket);
         } catch (error) {
             logger.error(`Command ${commandName} failed:`, error.message);

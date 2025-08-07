@@ -29,6 +29,10 @@ async function canManageUser(managerId, targetUserId, guildId) {
     return await permissionsManager.canManageUser(managerId, targetUserId, guildId);
 }
 
+async function isRoleProtected(roleId, guildId) {
+    return await permissionsManager.isRoleProtected(roleId, guildId);
+}
+
 async function requirePermission(data, permission, customErrorMessage = null) {
     const hasPerms = await checkPermissions(data, data.guild, permission);
 
@@ -38,7 +42,7 @@ async function requirePermission(data, permission, customErrorMessage = null) {
         } else {
             const permissionName = getPermissionName(permission);
             await sendMessage(data.channel, {
-                content: `You need **${permissionName}** to use this command!`,
+                content: `You need \`${permissionName}\` to use this command!`,
             });
         }
         return false;
@@ -67,6 +71,7 @@ module.exports = {
     canManageUser,
     requirePermission,
     requireHigherPriority,
+    isRoleProtected,
     Permissions,
     clearRolesCache: rolesManager.clearRolesCache.bind(rolesManager),
     clearMemberPermissionsCache: rolesManager.clearMemberPermissionsCache.bind(rolesManager),

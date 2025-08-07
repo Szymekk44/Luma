@@ -86,6 +86,17 @@ class PermissionsManager {
         }
     }
 
+    async isRoleProtected(roleId, guildId) {
+        try {
+            const role = await this.rolesManager.getRole(guildId, roleId);
+            if (!role) return -1;
+            return role.protected;
+        } catch (error) {
+            logger.error(`Failed to check role protection status ${roleId} in guild ${guildId}:`, error.message);
+            return -1;
+        }
+    }
+
     // === PRIORITY SYSTEM ===
 
     async getUserHighestPriority(userId, guildId) {

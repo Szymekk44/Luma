@@ -1,4 +1,4 @@
-require('dotenv').config();
+const logger = require('@core/logger');
 const config = require('@/config.js');
 
 async function sendMessage(channelId, data) {
@@ -10,7 +10,7 @@ async function sendMessage(channelId, data) {
     const result = await res.json();
 
     if (!res.ok) {
-        console.error('Failed to send message:', res.status);
+        logger.error(`Failed to send message: ${res.status} - ${result.error}`);
     }
 
     return result;
