@@ -1,2 +1,3 @@
-# ZyraBot
-ZyraBot for Zyntra - By Szymekk
+# LumaBot
+
+LumaBot for Zyntra - By Szymekk

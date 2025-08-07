@@ -1,0 +1,28 @@
+{
+    "name": "Lumabot",
+    "version": "1.0.0",
+    "description": "LumaBot for Zyntra - By Szymekk",
+    "main": "index.js",
+    "scripts": {
+        "start": "nodemon src/index.js"
+    },
+    "author": "Szymekk",
+    "license": "MIT",
+    "_moduleAliases": {
+        "@api": "src/api",
+        "@commands": "src/commands",
+        "@core": "src/core",
+        "@events": "src/events",
+        "@models": "src/models",
+        "@": "src"
+    },
+    "dependencies": {
+        "chalk": "^4.1.2",
+        "dotenv": "^17.2.1",
+        "module-alias": "^2.2.3",
+        "mongoose": "^8.17.0",
+        "node-fetch": "^3.3.2",
+        "nodemon": "^3.1.10",
+        "socket.io-client": "^4.8.1"
+    }
+}

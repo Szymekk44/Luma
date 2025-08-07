@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@api/*": ["src/api/*"],
+            "@commands/*": ["src/commands/*"],
+            "@core/*": ["src/core/*"],
+            "@events/*": ["src/events/*"],
+            "@models/*": ["src/models/*"],
+            "@/*": ["src/*"]
+        }
+    },
+    "include": ["src/**/*"]
+}
