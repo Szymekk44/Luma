@@ -1,10 +1,6 @@
 const { sendMessage } = require('../api/messages.js');
-const userManager = require('@core/userManager');
-
-function extractUserIdFromPing(mention) {
-    const match = mention.match(/^<@!?(\d+)>$/);
-    return match ? match[1] : null;
-}
+const { extractUserIdFromPing } = require('@core/utils/users.js');
+const userManager = require('@core/userManager.js');
 
 module.exports = {
     name: 'avatar',

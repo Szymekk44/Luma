@@ -1,12 +1,8 @@
-const { sendMessage } = require('../api/messages.js');
-const { checkPermissions, getUserHighestPriority, Permissions } = require('../core/permissions.js');
-const guildCache = require('@core/guildCache');
-const rolesManager = require('@core/rolesManager');
-
-function extractUserIdFromPing(mention) {
-    const match = mention.match(/^<@!?(\d+)>$/);
-    return match ? match[1] : null;
-}
+const guildCache = require('@core/guildCache.js');
+const rolesManager = require('@core/rolesManager.js');
+const { sendMessage } = require('@api/messages.js');
+const { extractUserIdFromPing } = require('@core/utils/users');
+const { checkPermissions, getUserHighestPriority, Permissions } = require('@core/permissions.js');
 
 module.exports = {
     name: 'perms',

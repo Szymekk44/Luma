@@ -1,6 +1,6 @@
-const helpEmbed = require('@core/helpEmbed');
-const guildCache = require('@core/guildCache');
-const rolesManager = require('@core/rolesManager');
+const helpEmbed = require('@core/helpEmbed.js');
+const guildCache = require('@core/guildCache.js');
+const rolesManager = require('@core/rolesManager.js');
 const { sendMessage } = require('../api/messages.js');
 const { getUserHighestPriority, requirePermission, isRoleProtected, Permissions } = require('../core/permissions.js');
 

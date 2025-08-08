@@ -1,6 +1,6 @@
-const helpEmbed = require('@core/helpEmbed');
+const helpEmbed = require('@core/helpEmbed.js');
+const guildCache = require('@core/guildCache.js');
 const { sendMessage } = require('../api/messages.js');
-const guildCache = require('@core/guildCache');
 const { requirePermission, Permissions } = require('../core/permissions.js');
 
 module.exports = {

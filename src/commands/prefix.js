@@ -1,6 +1,6 @@
 const { sendMessage } = require('../api/messages.js');
 const { requirePermission, Permissions } = require('../core/permissions.js');
-const guildCache = require('@core/guildCache');
+const guildCache = require('@core/guildCache.js');
 
 module.exports = {
     name: 'prefix',

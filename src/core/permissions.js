@@ -42,7 +42,7 @@ async function requirePermission(data, permission, customErrorMessage = null) {
         } else {
             const permissionName = getPermissionName(permission);
             await sendMessage(data.channel, {
-                content: `You need \`${permissionName}\` to use this command!`,
+                content: `You need \`${permissionName}\` permission to use this command!`,
             });
         }
         return false;

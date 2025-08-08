@@ -60,12 +60,13 @@ You can:
 
 ## 🧵 Commands Overview
 
--   `/avatar` — Display a user's avatar
 -   `/autorole` — Configure automatic role assignment
--   `/welcome` — Set up welcome messages
--   `/prefix` — Change the bot prefix for your server
--   `/perms` — Check a user’s permissions
+-   `/avatar` — Display a user's avatar
 -   `/help` — View all available commands
+-   `/kick` — Kick a user from the server
+-   `/perms` — Check a user’s permissions
+-   `/prefix` — Change the bot prefix for your server
+-   `/welcome` — Set up welcome messages
 
 ---
 

@@ -11,7 +11,6 @@ const userCommandHistory = new Map(); // userId -> array of timestamps
 module.exports = {
     name: 'messageReceived',
     async execute(socket, commands, data) {
-        console.log(data);
         const content = data.content?.trim();
         if (!content) return;
 
