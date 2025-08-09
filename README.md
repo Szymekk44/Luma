@@ -1,6 +1,6 @@
 # Luma - Open Source Bot for Zyntra.gg
 
-**Luma** is an open-source moderation and utility bot built for [Zyntra](https://zyntra.gg) by [Szymekk](https://github.com/szymekk).
+**Luma** is an open-source moderation and utility bot built for [Zyntra](https://zyntra.gg) by [Szymekk](https://youtube.com/szymekk).
 It supports key features like autoroles, welcome messages, permission viewing, and much more!
 
 You can:
